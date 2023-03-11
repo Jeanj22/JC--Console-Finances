@@ -1,3 +1,5 @@
+//array
+
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -87,6 +89,13 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// variables
+// variables total number of months
 var monthsTotal = finances.length;
 var total = 0;
+
+//for loop starts at 0, runs while i is less than length of array
+// increments by 1
+
+for (var i = 0; i < finances.length; i++) {
+   console.log("Financial Analysis");
+}
