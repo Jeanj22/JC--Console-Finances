@@ -89,13 +89,28 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// variables total number of months
-var monthsTotal = finances.length;
-var total = 0;
+// // variables total number of months
+// var monthsTotal = finances.length;
+// var total = 0;
 
-//for loop starts at 0, runs while i is less than length of array
-// increments by 1
+// //for loop starts at 0, runs while i is less than length of array
+// // increments by 1
 
-for (var i = 0; i < finances.length; i++) {
-   console.log("Financial Analysis");
-}
+// for (var i = 0; i < finances.length; i++) {
+//    console.log("Financial Analysis");
+// }
+
+
+
+
+
+
+
+
+// Final output - using template literals
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+
+console.log("Financial Analysis---------------------------")
+totalMonths = finances.length;
+console.log(`Total Months: ${totalMonths}`);
