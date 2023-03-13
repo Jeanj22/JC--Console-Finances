@@ -8,8 +8,8 @@ The code analyzes a dataset composed of arrays with two fields: Date and Profit/
 
 JC Console-Finances produces a financial analysis of the following: 
 - The total number of months included in the dataset.
-- The net total amount of Profit/Losses over the entire period.
-- The average of the changes in Profit/Losses over the entire period.
+- The total amount of Profit/Losses over the entire period.
+- The average of the change in Profit/Losses over the entire period.
 - The greatest increase in profits (date and amount) over the entire period.
 - The greatest decrease in losses (date and amount) over the entire period.
 
@@ -32,7 +32,7 @@ To display the financial analysis in your browser you must use the inspector too
 2. Select the 'right-click' button on your mouse/trackpad,
 3. Then select 'Inspect' from the menu,  
 4. Then 'Console' at the top of the inspector box,
-5. The financial analysis will then be displayed. 
+5. The Financial Analysis will then be displayed. 
 
 
 
@@ -45,9 +45,9 @@ To display the financial analysis in your browser you must use the inspector too
 ## Credits
 
 Resources consulted:
-1: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-2. https://www.w3schools.com/js/js_string_templates.asp
-3: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+- https://www.w3schools.com/js/js_string_templates.asp
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
 
 
 
