@@ -99,7 +99,9 @@ var total = 0;
    total += finances[i][1];
 }
 
-// calculate average change - change/total
+
+
+// calculate average change - change then avg change
 var change =  0;
 for (var i = 1; i < totalMonths; i++) {
   change += finances[i][1] - finances[i - 1][1];
@@ -113,12 +115,24 @@ avgChange = Math.round((change / (finances.length - 1)) * 100) / 100;
 
 
 //greatest increase in Profits/Losses
+var greatestIncrease = ['', 0];
+for (var i = 1; i < totalMonths; i++) {
+  var increase = finances[i][1] - finances[i - 1][1];
+  if (increase > greatestIncrease[1]) {
+  greatestIncrease = [finances[i][0], increase];
+  }
+}
 
 
 
 //greatest decrease in Profits/Losses
-
-
+var greatestDecrease = ['', 0];
+for (var i = 1; i < totalMonths; i++) {
+  var decrease = finances[i][1] - finances[i - 1][1];
+  if (decrease < greatestDecrease[1]) {
+  greatestDecrease = [finances[i][0], decrease];
+  }
+}
 
 
 
@@ -127,24 +141,29 @@ avgChange = Math.round((change / (finances.length - 1)) * 100) / 100;
 // Final output - using template literals
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
-console.log("Financial Analysis---------------------------")
+console.log("Financial Analysis"
+);
+console.log("-----------------"
+);
 totalMonths = finances.length;
-console.log(`Total Months: ${totalMonths}`);
+console.log(`Total Months: ${totalMonths}
+`)
 
 //Calculate total of array - Total: $38382578
-console.log(`Total:  ${total}`);
+console.log(`Total: $${total}
+`);
 
 // Average Change: -2315.12
-console.log(`Average Change: ${avgChange}`);
-
+console.log(`Average Change: ${avgChange}
+`);
 
 // Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
-
-
+console.log(`Greatest Increase in Profits/Losses: ${greatestIncrease[0]} ($${greatestIncrease[1]})
+`);
 
 // Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
-
-
+console.log(`Greatest Decrease in Profits/Losses: ${greatestDecrease[0]}  ($${greatestDecrease[1]})
+`);
 
 
 
