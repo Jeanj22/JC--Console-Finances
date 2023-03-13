@@ -97,12 +97,32 @@ var totalMonths = finances.length;
 var total = 0;
  for (var i = 0; i < totalMonths; i++) {
    total += finances[i][1];
-   console.log(finances[i][1]);
- }
+}
+
+// calculate average change - change/total
+var change =  0;
+for (var i = 1; i < totalMonths; i++) {
+  change += finances[i][1] - finances[i - 1][1];
+}
+
+var avgChange = (change / (totalMonths - 1));
+avgChange = Math.round((change / (finances.length - 1)) * 100) / 100;
+// round up answer using math. round
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
 
 
 
- 
+//greatest increase in Profits/Losses
+
+
+
+//greatest decrease in Profits/Losses
+
+
+
+
+
+
 
 // Final output - using template literals
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
@@ -111,15 +131,11 @@ console.log("Financial Analysis---------------------------")
 totalMonths = finances.length;
 console.log(`Total Months: ${totalMonths}`);
 
-
 //Calculate total of array - Total: $38382578
-console.log("Total")
-console.log(`Total: ${total}`);
-
-
+console.log(`Total:  ${total}`);
 
 // Average Change: -2315.12
-
+console.log(`Average Change: ${avgChange}`);
 
 
 // Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
