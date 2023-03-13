@@ -1,5 +1,4 @@
 //array
-
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -89,28 +88,47 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// // variables total number of months
-// var monthsTotal = finances.length;
-// var total = 0;
-
-// //for loop starts at 0, runs while i is less than length of array
-// // increments by 1
-
-// for (var i = 0; i < finances.length; i++) {
-//    console.log("Financial Analysis");
-// }
+//total number of months
+var totalMonths = finances.length;
 
 
-
+// calculate total - using for loop
+// for loop starts at 0, runs while i is less than length of array + increments by 1
+var total = 0;
+ for (var i = 0; i < totalMonths; i++) {
+   total += finances[i][1];
+   console.log(finances[i][1]);
+ }
 
 
 
-
+ 
 
 // Final output - using template literals
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
-
 console.log("Financial Analysis---------------------------")
 totalMonths = finances.length;
 console.log(`Total Months: ${totalMonths}`);
+
+
+//Calculate total of array - Total: $38382578
+console.log("Total")
+console.log(`Total: ${total}`);
+
+
+
+// Average Change: -2315.12
+
+
+
+// Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
+
+
+
+// Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
+
+
+
+
+
