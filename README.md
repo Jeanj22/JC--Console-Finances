@@ -29,7 +29,7 @@ https://jeanj22.github.io/JC--Console-Finances/
 
 To display the financial analysis in your browser you must use the inspector tool, as shown below: 
 1. Select the above url/link of the deployed application to open it your browser,
-2. Select the 'right-click' button on your mouse/trackpad,
+2. Within the browser window select the 'right-click' button on your mouse/trackpad,
 3. Then select 'Inspect' from the menu,  
 4. Then 'Console' at the top of the inspector box,
 5. The Financial Analysis will then be displayed. 
