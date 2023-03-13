@@ -101,7 +101,7 @@ var total = 0;
 
 
 
-// calculate average change - change then avg change
+// calculate average change - change then avg change (Total/(Number of months - 1)
 var change =  0;
 for (var i = 1; i < totalMonths; i++) {
   change += finances[i][1] - finances[i - 1][1];
@@ -109,8 +109,6 @@ for (var i = 1; i < totalMonths; i++) {
 
 var avgChange = (change / (totalMonths - 1));
 avgChange = Math.round((change / (finances.length - 1)) * 100) / 100;
-// round up answer using math. round
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
 
 
 
@@ -122,7 +120,6 @@ for (var i = 1; i < totalMonths; i++) {
   greatestIncrease = [finances[i][0], increase];
   }
 }
-
 
 
 //greatest decrease in Profits/Losses
@@ -139,7 +136,7 @@ for (var i = 1; i < totalMonths; i++) {
 
 
 // Final output - using template literals
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
 
 console.log("Financial Analysis"
 );
@@ -162,8 +159,13 @@ console.log(`Greatest Increase in Profits/Losses: ${greatestIncrease[0]} ($${gre
 `);
 
 // Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
-console.log(`Greatest Decrease in Profits/Losses: ${greatestDecrease[0]}  ($${greatestDecrease[1]})
+console.log(`Greatest Decrease in Profits/Losses: ${greatestDecrease[0]} ($${greatestDecrease[1]})
 `);
 
 
 
+
+// resources used
+// 1: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+// 2. https://www.w3schools.com/js/js_string_templates.asp
+// 3: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
